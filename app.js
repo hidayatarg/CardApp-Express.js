@@ -4,9 +4,11 @@ const express = require('express');
 //Create server
 const app = express();
 
+app.set('view engine','pug');
+
 //Route
 app.get('/', (req, res) =>{
-    res.send('<h1>Hello express</h1>');
+    res.render('index');
 });
 
 app.get('/about', (req, res) => {
