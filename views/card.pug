@@ -1,10 +1,5 @@
-doctype html
-html(lang="en")
-  head
-    title Flash Cards
-  body
-    header
-      h1 Flash Cards
+extends layout.pug
+block content
     section#content
       ul  
         each color in ["black","yellow","green"]
@@ -15,5 +10,3 @@ html(lang="en")
           i Hint: #{Hint}
       else
         p there is no hint
-    footer
-      p  An app to help you study
