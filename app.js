@@ -19,6 +19,15 @@ app.get('/about', (req, res) => {
     res.send('Welcome to about page');
 });
 
+app.get('/hello',(req, res)=>{
+    res.render('hello');
+});
+
+app.post('/hello', (req, res) => {
+    // after post rerender it
+    res.render('hello');
+});
+
 // Call back added
 app.listen(3000, function(){
     console.log("The application is running on localhost:3000");    
