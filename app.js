@@ -12,7 +12,7 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/card', (req, res)=>{
-    res.render('card',{prompt:"Ahmad Jan"});
+    res.render('card',{prompt:"Ahmad Jan", Hint:"hint comes here"});
 });
 
 app.get('/about', (req, res) => {
