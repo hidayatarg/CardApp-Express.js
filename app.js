@@ -11,6 +11,10 @@ app.get('/', (req, res) =>{
     res.render('index');
 });
 
+app.get('/card', (req, res)=>{
+    res.render('card',{prompt:"Ahmad Jan"});
+});
+
 app.get('/about', (req, res) => {
     res.send('Welcome to about page');
 });
