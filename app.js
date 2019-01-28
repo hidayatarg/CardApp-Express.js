@@ -7,6 +7,8 @@ const bodyParser= require('body-parser');
 const app = express();
 //Use bodyParser (Middleware)
 app.use(bodyParser.urlencoded({ extended: false }));
+// approch
+//app.use(express.json())
 app.set('view engine','pug');
 
 //Route
@@ -28,9 +30,9 @@ app.get('/hello',(req, res)=>{
 
 app.post('/hello', (req, res) => {
     // after post rerender it
-    console.dir(req.body);
-    
-    res.render('hello');
+   // res.jsonp(req.body);
+  // res.render('hello', { name: req.body.username })
+   res.json(req.body);
 });
 
 // Call back added
