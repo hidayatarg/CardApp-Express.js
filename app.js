@@ -1,9 +1,12 @@
 const express = require('express');
+const bodyParser= require('body-parser');
+
 
 
 //Create server
 const app = express();
-
+//Use bodyParser (Middleware)
+app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine','pug');
 
 //Route
@@ -25,6 +28,8 @@ app.get('/hello',(req, res)=>{
 
 app.post('/hello', (req, res) => {
     // after post rerender it
+    console.dir(req.body);
+    
     res.render('hello');
 });
 
