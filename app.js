@@ -30,9 +30,8 @@ app.get('/hello',(req, res)=>{
 
 app.post('/hello', (req, res) => {
     // after post rerender it
-   // res.jsonp(req.body);
-  // res.render('hello', { name: req.body.username })
-   res.json(req.body);
+   // res.json(req.body);
+   res.render('hello', { name: req.body.username })  
 });
 
 // Call back added
